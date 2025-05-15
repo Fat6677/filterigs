@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Camera with Filters</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Camera with Filters</h1>
+  <video id="video" autoplay playsinline></video>
+
+  <div class="filters" role="radiogroup" aria-label="Choose a filter">
+    <button class="filter-btn active" data-filter="none" aria-checked="true" role="radio" tabindex="0">None</button>
+    <button class="filter-btn" data-filter="grayscale(100%)" aria-checked="false" role="radio" tabindex="-1">Grayscale</button>
+    <button class="filter-btn" data-filter="sepia(80%)" aria-checked="false" role="radio" tabindex="-1">Sepia</button>
+    <button class="filter-btn" data-filter="invert(100%)" aria-checked="false" role="radio" tabindex="-1">Invert</button>
+    <button class="filter-btn" data-filter="contrast(150%)" aria-checked="false" role="radio" tabindex="-1">Contrast</button>
+    <button class="filter-btn" data-filter="blur(3px)" aria-checked="false" role="radio" tabindex="-1">Blur</button>
+    <button class="filter-btn" data-filter="brightness(140%)" aria-checked="false" role="radio" tabindex="-1">Bright</button>
+    <button class="filter-btn" data-filter="saturate(180%)" aria-checked="false" role="radio" tabindex="-1">Saturate</button>
+  </div>
+
+  <button id="capture-btn" aria-label="Capture photo with selected filter">Capture Photo</button>
+
+  <canvas id="snapshot"></canvas>
+
+  <div class="footer">Works on Android Chrome and modern browsers with camera access.</div>
+
+  <!-- Hubungkan dengan script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
